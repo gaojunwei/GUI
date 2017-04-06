@@ -2,7 +2,6 @@ package com.gjw.test.frame;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -109,7 +108,7 @@ public class LoginMain
         
         SwingUtilities.updateComponentTreeUI(frame);//通过当前外观初始化其 UI 属性
         //修改图标
-        frame.setIconImage (Toolkit.getDefaultToolkit().createImage(System.getProperty("user.dir")+"/source/11.jpg"));
+        Utile.getInstance().setIconImageFrame(frame, "/source/11.jpg");
         frame.setVisible(true);
     }
 }

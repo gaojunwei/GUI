@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.gjw.test.jdialog.JDialogOne;
 import com.gjw.test.listener.WDListener;
 import com.gjw.test.util.Utile;
 
@@ -56,7 +57,9 @@ public class HttpFrame
         		String req_addr_str = String.valueOf(req_addr.getText()).trim();
         		String req_params_str = String.valueOf(req_params.getText()).trim();
         		String req_header_text_str = String.valueOf(req_header_text.getText()).trim();
-        		System.out.println(req_addr_str+","+req_params_str+","+req_header_text_str);
+        		//打开jdialog对话框
+        		JDialogOne jDialogOne = new JDialogOne(jFrame, "对话框", true);
+        		System.out.println("得到JDialog输入框中的值："+jDialogOne.getParam());
             }
         });
         
