@@ -6,16 +6,14 @@ import java.awt.Toolkit;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 
-import org.apache.log4j.Logger;
-
 public class Utile extends JFrame
 {
 	private static final long serialVersionUID = 9037420577250914815L;
 
-	private static Logger 		logger = Logger.getLogger(Utile.class.getName());
-	
-	public static Utile 	utile = null;
-    private Utile(){}
+	public static String 		BASEUrl = "";
+	public static String 		TOKEN = "";
+	public static Utile 		utile = null;
+    //private Utile(){}
     
     /**
      * <li>方法名称：单例模式</li>
@@ -71,5 +69,16 @@ public class Utile extends JFrame
 	 */
 	public void setIconImageFrame(JFrame jFrame,String imgPath) {
 		jFrame.setIconImage (Toolkit.getDefaultToolkit().createImage(System.getProperty("user.dir")+imgPath));
+	}
+	
+	/**
+	 * 完善请求的URL
+	 * @param jFrame
+	 * @param imgPath
+	 */
+	public String getFullUrl(String reqUrl) {
+		if(!reqUrl.substring(0,7).equals("http://"))
+			reqUrl = Utile.BASEUrl+reqUrl;
+		return reqUrl;
 	}
 }
