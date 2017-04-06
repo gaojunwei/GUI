@@ -1,4 +1,4 @@
-package com.gjw.test;
+package com.gjw.test.frame;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
@@ -18,7 +18,6 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 import org.apache.log4j.Logger;
 
-import com.gjw.test.actiom.HttpFrame;
 import com.gjw.test.util.Utile;
 
 public class LoginMain

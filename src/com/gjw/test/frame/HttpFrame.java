@@ -1,4 +1,4 @@
-package com.gjw.test.actiom;
+package com.gjw.test.frame;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.gjw.test.listener.WDListener;
 import com.gjw.test.util.Utile;
 
 public class HttpFrame
