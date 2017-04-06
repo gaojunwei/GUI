@@ -34,10 +34,9 @@ public class TransSubmit
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 */
-	public static String doPost(String hostAddr,Map<String, String> params) throws UnsupportedEncodingException
+	public static String doPost(HttpPost httpPost,Map<String, String> params)
 	{
 		String result = null;
-		HttpPost httpPost = new HttpPost(hostAddr);
 		CloseableHttpClient httpclient = HttpClients.createDefault();
 		if (params != null)
 		{
