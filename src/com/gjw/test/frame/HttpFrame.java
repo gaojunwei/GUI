@@ -80,6 +80,7 @@ public class HttpFrame
         req_header_text = new JTextField(43);
         
         text_area = new JTextArea(14,65);
+        text_area.setEditable(false);
         text_area.setLineWrap(true);//设置文本区的换行策略。如果设置为 true，则当行的长度大于所分配的宽度时，将换行。如果设置为 false，则始终不换行
         
         JScrollPane scrollPane = new JScrollPane(text_area);  
